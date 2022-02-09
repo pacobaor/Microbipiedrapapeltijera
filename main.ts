@@ -27,6 +27,17 @@ radio.onReceivedNumber(function (receivedNumber) {
             # # . # #
             `)
     }
+    basic.pause(1500)
+    if (receivedNumber == 1) {
+        basic.showIcon(IconNames.Asleep)
+        radio.sendNumber(6)
+    } else if (receivedNumber == 2) {
+        basic.showIcon(IconNames.Silly)
+        radio.sendNumber(4)
+    } else if (receivedNumber == 3) {
+        basic.showIcon(IconNames.Fabulous)
+        radio.sendNumber(5)
+    }
 })
 input.onGesture(Gesture.Shake, function () {
     radio.sendNumber(Mi_jugada)
